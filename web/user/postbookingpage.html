@@ -1,25 +1,39 @@
-<script src="../js/postbooking.js"></script>
-<script src="../js/bootstrap-datetimepicker.js"></script>
-<link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
-<div id="content" class="container jumbotron">
-    <h3 id="heading1">Post Your Carpool Info Here</h3>
+<div id="content" class="container jumbotron"
+    <link href = "css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <h3 id="heading1">Post Your Carpool Information Here</h3>
     <p id="description">~~~~~~~~~~Detailed Explanation~~~~~~~~~~</p>
     <div class="col-sm-6">
-        <input id="from" type="text" class="form-control" placeholder="Departure Eg.Ottawa" autocomplete="off"
-               spellcheck="off">
+        <input id="departure" type="text" class="form-control" placeholder="Departure Eg.Ottawa" autocomplete="off" spellcheck="off">
+    </div>
+	<div class="col-sm-6">
+        <input id="via1" type="text" class="form-control" placeholder="Via Eg.Peterborough" autocomplete="off" spellcheck="off">
+    </div>
+	<div class="col-sm-3">
+        <input id = "price1" class="form-control" placeholder="Price" autocomplete="off" spellcheck="off">
+    </div>
+	<div class="col-sm-6">
+        <input id="via2" type="text" class="form-control" placeholder="Via Eg.Toronto" autocomplete="off" spellcheck="off">
+    </div>
+	<div class="col-sm-3">
+        <input id = "price2" class="form-control" placeholder="Price" autocomplete="off" spellcheck="off">
     </div>
     <div class="col-sm-6">
-        <input id="to" type="text" class="form-control" placeholder="Destination Eg.Toronto" autocomplete="off"
-               spellcheck="off">
+        <input id="destination" type="text" class="form-control" placeholder="Destination Eg.Hamilton" autocomplete="off" spellcheck="off">
     </div>
     <div class="col-sm-12">
         <br>
     </div>
-    <div class="col-sm-3">
-        <input id="passenger" class="form-control" placeholder="Passenger(s)" autocomplete="off" spellcheck="off">
+	<div class="col-sm-3">
+        <input id = "price3" class="form-control" placeholder="Price" autocomplete="off" spellcheck="off">
     </div>
     <div class="col-sm-3">
-        <input id="price" class="form-control" placeholder="Price" autocomplete="off" spellcheck="off">
+        <input id="seat" class="form-control" placeholder="Passenger(s)" autocomplete="off" spellcheck="off">
+    </div>
+
+	<div class="col-sm-10">
+        <input id = "descriptions" class="form-control" placeholder="Post Your Trip Description" autocomplete="off" spellcheck="off">
     </div>
     <div class="col-sm-4">
         <div class="container">
@@ -42,23 +56,20 @@
     </div>
     <button id="send" class="btn btn-primary">Submit</button>
     <label id="message" class="label-primary"></label>
-
-    <div id="dialog" class="modal fade" role="dialog">
-        <form action="/user/newvehicaluser.do" method="post">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <label>Please enter your vehicle information to complete this action</label>
-                    </div>
-                    <div class="modal-body">
-                        <input name="vehicle_name" id="vehicle_name" class="form-control"
-                               placeholder="type your vehicle model at here">
-                    </div>
-                    <div class="modal-footer">
-                        <input type="submit" id="submit" class="btn-primary btn" name="Submit">
-                    </div>
+    <script src="js/postbooking.js"></script>
+    <div id = "dialog" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label>Please enter your vehicle information to complete this action</label>
+                </div>
+                <div class="modal-body">
+                    <input id = "vehicle_name" class="form-control" placeholder="type your Lisence's Plate">
+                </div>
+                <div class="modal-footer">
+                    <button id = "submit" class="btn-primary btn">Submit</button>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </div>
